@@ -20,7 +20,7 @@ int sum(int n) {
 int main()
 {
 	int num = 0;
-	cout << "Enter an number: ";
+	cout << "Enter an number any number: ";
 	cin >> num;
 	
 	cout << "The sum of " << num << " and all the numbers before it is " << sum(num);
