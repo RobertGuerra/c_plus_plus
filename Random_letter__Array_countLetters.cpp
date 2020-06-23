@@ -1,3 +1,7 @@
+/*
+This program uses some functions to help create an array of random letters. then will count the number of times each letter occurs.
+*/
+
 #include <iostream>
 #include <ctime>
 
