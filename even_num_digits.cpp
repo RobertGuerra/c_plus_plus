@@ -8,6 +8,12 @@ public:
 	int findNumbers(vector<int>& nums) {
 		// keep count
 		auto total = 0;
+		auto arrLength = nums.size();
+
+		if (arrLength <= 0)
+		{
+			cout << "Sorry, the Array was empty!" << endl << endl;
+		}
 
 		for (int i = 0; i < nums.size(); i++)     // array being passed { 12, 1, 123, 778, 1234 }
 		{
@@ -19,11 +25,12 @@ public:
 				nums[i] = nums[i] / 10;
 				++numDigits;
 			}
-			if (numDigits % 2 == 0)
+			if (numDigits % 2 == 0 && numDigits != 0)
 			{
 				total++;
 			}
 		}
+		
 		return total;
 	}
 };
@@ -33,7 +40,7 @@ public:
 
 int main()
 {
-	vector<int> myVec = { 123, 331, 123, 778, 134 };
+	vector<int> myVec = { 12, 1, 0, 2456, 8967 };
 	Solution obj;
 
 	cout << obj.findNumbers(myVec) << endl << endl;
