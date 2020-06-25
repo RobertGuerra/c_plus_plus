@@ -7,10 +7,13 @@ class Solution {
 public:
 	int findNumbers(vector<int>& nums) {
 		// keep count
-		auto numDigits = 0, total = 0;
+		auto total = 0;
 
 		for (int i = 0; i < nums.size(); i++)     // array being passed { 12, 1, 123, 778, 1234 }
 		{
+			// reset numDigits to zero
+			auto numDigits = 0;
+
 			while (nums[i] != 0)
 			{
 				nums[i] = nums[i] / 10;
@@ -30,7 +33,7 @@ public:
 
 int main()
 {
-	vector<int> myVec = { 12, 1, 123, 778, 1234 };
+	vector<int> myVec = { 123, 331, 123, 778, 134 };
 	Solution obj;
 
 	cout << obj.findNumbers(myVec) << endl << endl;
