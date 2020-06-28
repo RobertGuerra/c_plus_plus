@@ -1,3 +1,6 @@
+/*
+code adds a zero when a zero is encountered and pops last element when a zero is added
+*/
 #include <iostream>
 #include <vector>
 
@@ -13,11 +16,7 @@ public:
 		while (i >= 0)
 		{
 			int val = arr[i];
-			if (val)
-			{
-
-			}
-			else
+			if (!val)
 			{
 				arr.insert(arr.begin() + i, 0);
 				arr.pop_back();
